@@ -1,20 +1,20 @@
 #Definir as variaveis
-combustivel = 100
+combustivel = 110
 tripulantes = []
 
 ##Definir funções
 
 def viajar ():
     global combustivel
-    if (combustivel>=30):
-        combustivel =combustivel - 30
+    if (combustivel >= 30):
+        combustivel = combustivel - 30
         print("A nave viajou")
     else :
         print ("Você está sem combustível o suficiente. Abasteça!")
 
 def abastecer():
     global combustivel
-    combustivel = 100
+    combustivel = 110
     print("Tanque Cheio! 🛢️")
 
 def status_nave():
