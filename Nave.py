@@ -28,9 +28,16 @@ def registrarTripulantes():
     tripulantes.append(novoTripulante)
     print("Tripulante inserido com sucesso! 🚀")
 
+def retirarTripulantes():
+    if len (tripulantes) == 0:
+      print("\n Não há tripulantes na nave!")
+    else:
+     tripulantes.pop()
+     print("Tripulante retirado com sucesso! 🚀")
+
 while True:
     print("\nBem vindo ao menu interativo da nave espacial. Por favor selecione uma opção:")
-    print ("\n1-Mostrar status da nave | 2-Viajar | 3-Abastecer | 4-Novo tripulante | 5-Sair")
+    print ("\n1-Mostrar status da nave | 2-Viajar | 3-Abastecer | 4-Novo tripulante | 5-Retirar tripulante | 6-Sair")
     opcao = input("Escolha: ")
     if (opcao == "1"):
         status_nave()
@@ -41,8 +48,11 @@ while True:
     elif (opcao == "4"):
         registrarTripulantes()
     elif (opcao == "5"):
+         retirarTripulantes()
+    elif (opcao == "6"):
         print("Viagem encerrada!")
         break
+    
         
 #status_nave()
 #registrarTripulantes()
