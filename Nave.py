@@ -15,22 +15,26 @@ def viajar ():
 
     else :
         print ("Você está sem combustível o suficiente. Abasteça!")
+    travarMenu()
 
 def abastecer():
     global combustivel
     combustivel = 100
     print("Tanque Cheio! 🛢️")
+    travarMenu()
 
 def status_nave():
-   print("\n-------- Status Da Nave --------")
-   print(f"Temos {combustivel} de combustível")
-   print(f"Os tripulantes são: {tripulantes}")
-   print("----------------------------- \n")
+    print("\n-------- Status Da Nave --------")
+    print(f"Temos {combustivel} de combustível")
+    print(f"Os tripulantes são: {tripulantes}")
+    print("----------------------------- \n")
+    travarMenu()
 
 def registrarTripulantes():
     novoTripulante = input("Qual o nome do novo tripulante?: ")
     tripulantes.append(novoTripulante)
     print("Tripulante inserido com sucesso! 🚀")
+    travarMenu()
 
 def retirarTripulantes():
     if len (tripulantes) == 0:
@@ -38,6 +42,10 @@ def retirarTripulantes():
     else:
      tripulantes.pop()
      print("Tripulante retirado com sucesso! 🚀")
+     travarMenu()
+
+def travarMenu():
+    input("\nPressione <ENTER> para continuar....")
 
 while True:
     print("\nBem vindo ao menu interativo da nave espacial. Por favor selecione uma opção:")
