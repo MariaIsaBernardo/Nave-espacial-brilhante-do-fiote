@@ -6,9 +6,13 @@ tripulantes = []
 
 def viajar ():
     global combustivel
-    if (combustivel >= 30):
+    if (combustivel >= 30) and tripulantes != []:
         combustivel = combustivel - 30
         print("A nave viajou")
+
+    elif tripulantes == []:
+      print ("Não podemos viajar a nave está sem tripulantes!")
+
     else :
         print ("Você está sem combustível o suficiente. Abasteça!")
 
@@ -30,7 +34,7 @@ def registrarTripulantes():
 
 def retirarTripulantes():
     if len (tripulantes) == 0:
-      print("\n Não há tripulantes na nave!")
+      print("\n Não há tripulantes na nave para remover!")
     else:
      tripulantes.pop()
      print("Tripulante retirado com sucesso! 🚀")
